@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed");
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#021a3d;
+    font-family: "Barlow semi Condensed",sans-serif;
+}
+.rules-modal{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: grid;
+    place-items: center;
+     position: fixed;
+     z-index: 9;
+    background:rgba(0,0,0,0.5);
+    visibility: visible;
+}
+.rules-modal-active{
+    visibility: hidden;
+}
+.modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    width: 400px;
+    height:380px;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.close-icon{
+    background: transparent;
+    border: none;
+}
+.container{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.modal-header{
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.modal-main {
+    height: 100%;
+ display: grid;
+ place-items: center;
+}
+
+.score-header{
+    display: flex;
+    width: 60%;
+    background:transparent;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 1rem;
+    border: 5px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+}
+.game{
+    font-size: 1.2rem;
+    color: white;
+    line-height:35px;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    padding-top: 2rem;
+    }
+.score-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    background-color: white;
+    border-radius: 10px;
+}
+.score-card h3{
+    font-weight: 100;
+    font-size: 1rem;
+}
+.score-card p{
+    font-size: 3rem;
+    font-weight: 800;
+}
+.main-game{
+    height: 100%;
+  display: grid;
+  place-items: center;
+  visibility: visible;
+}
+
+
+.bg-traingle .traingle{
+    height: 350px;
+}
+.bg-traingle{
+    position: relative;
+}
+.bg-traingle .rock,
+.bg-traingle .paper,
+.bg-traingle .scissor{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: absolute;
+}
+.rock{
+    border:2rem solid hsl(349, 90%, 52%);
+ 
+}
+.paper{
+    border:2rem solid hsl(230, 100%, 62%);
+}
+.scissor{
+    border:2rem solid hsl(39, 100%, 49%);
+}
+.rock:hover,.paper:hover,.scissor:hover{
+    width: 200px;
+    height: 200px;
+    transition: .2s ;    
+   cursor: pointer;
+}
+.gesture .rock{
+    bottom: -60px;
+    left:95px;
+}
+
+.gesture .paper{
+    top: -100px;
+    left: -100px;
+    
+}
+.gesture .scissor{
+    top:-100px;
+    right: -100px;
+}
+
+.game-started{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    visibility: visible;
+    margin-top: 2rem;
+    place-items: center;
+}
+
+
+.clicked{
+    display: none;
+    visibility: hidden;
+}
+
+.game-started .img{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+   align-items: center; 
+   padding: 2.5rem;
+}
+.display{
+    font-size: 3rem;
+    color: white;
+    margin: 0rem 3rem;
+}
+.play-again{
+    margin-top: 1rem;
+    width: 200px;
+    height: 40px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color:hsl(349, 71%, 52%) ;
+    border-radius: 5px;
+    border: none;
+}
+.rules-btn{
+    width: 150px;
+    height: 40px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+.rules-btn:hover{
+    font-weight: 900;
+    border: 2px solid white;
+}
+.you-div,.house-div{
+ 
+    padding: 3rem;
+    text-align: center;
+    color: white;
+}
+.you-div h1,.house-div h1{
+    margin-bottom: 5rem;
+}
+.clicked-rock{
+    border:2rem solid hsl(349, 90%, 52%);
+}
+.clicked-paper{
+    border:2rem solid hsl(230, 100%, 62%);
+}
+.clicked-scissor{
+    border:2rem solid hsl(39, 100%, 49%);
+}
+@media (width < 1000px){
+    .you-div{
+       grid-column: 1/2;
+    }
+    .house-div{
+      grid-column: 3/4;
+    }
+    .center{
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+    .you-div,.house-div{
+        padding: 1rem;
+    }
+    .clicked-rock{
+        border:1rem solid hsl(349, 90%, 52%);
+    }
+    .clicked-paper{
+        border:1rem solid hsl(230, 100%, 62%);
+    }
+    .clicked-scissor{
+        border:1rem solid hsl(39, 100%, 49%);
+    }
+    .display{
+        font-size: 1.5rem;
+    }
+ 
+    .you-div h1, .house-div h1{
+        margin-bottom: 1rem;
+    }
+}
+@media (width < 850px){
+    .score-header{
+        width: 90%;
+        padding: .6rem;
+    }
+    .game{
+        font-size: 1rem;
+    }
+    .game-started .img{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media (width <600px){
+    .modal{
+        width: 300px;
+        height:350px;
+        padding: 1.25rem;
+        border-radius: 10px;
+    }
+    .rules-img{
+        width: 250px;
+    }
+    .score-card{
+        width: 100px;
+    }
+    .game{
+        font-size: .8rem;
+    }
+    .bg-traingle .traingle{
+        height: 250px;
+    }
+    .bg-traingle .rock,
+.bg-traingle .paper,
+.bg-traingle .scissor{
+    width: 120px;
+    height: 120px;
+}
+.rock{
+    border:1rem solid hsl(349, 90%, 52%);
+ 
+}
+.paper{
+    border:1rem solid hsl(230, 100%, 62%);
+}
+.scissor{
+    border:1rem solid hsl(39, 100%, 49%);
+}
+.gesture .rock{
+    bottom: -30px;
+    left:80px;
+}
+
+.gesture .paper{
+    top: -60px;
+    left: -40px;
+    
+}
+.gesture .scissor{
+    top:-60px;
+    right: -45px;
+}
+}

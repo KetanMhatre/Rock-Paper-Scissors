@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+        <!--MODAL-->
+        <div class="rules-modal ">
+            <div class="modal">
+                <div class="modal-header ">
+                    <h3>rules</h3>
+                    <button class="close-icon">
+                        <img src="/images/icon-close.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-main">
+                    <img class="rules-img" src="/images/image-rules.svg" alt="">
+                </div>
+            </div>
+          
+        </div>
+      
+    <div class="container ">
+        <div class="main">
+            <div class="score-header">
+                <div class="game">
+                    <h1>Rock</h1>
+                    <h1>Paper</h1>
+                    <h1>scissors</h1>
+                </div>
+               <div class="score-card">
+                <h3>score</h3>
+                <p class="score">0</p>
+               </div>
+            </div>
+
+            <div class="main-game">
+                <div class="bg-traingle">
+                    <img class="traingle" src="/images/bg-triangle.svg" alt="">
+                    <div class="gesture">
+                        <button class="rock " data-id="rock">
+                            <img class="rock-img option" id="rock" src="/images/icon-rock.svg" alt="">
+                        </button>
+                        <button class="paper " data-id="paper">
+                            <img class="paper-img option" id="paper" src="/images/icon-paper.svg" alt="">
+                        </button>
+                        <button class="scissor" data-id="scissor">
+                            <img class="scissor-img option" id="scissor" src="/images/icon-scissors.svg" alt="">
+                        </button>
+                    </div>
+                </div>    
+            </div>
+    
+ 
+            <div class="game-started clicked ">
+                <div class="you-div">
+                    <h1>YOU PICKED</h1>
+                    <button class="player img ">
+                        <img class="player-Img "  src="" alt="">
+                    </button>
+                </div>
+               
+                <div class="center">
+                    <h3 class="display"></h3>
+                    <button class="play-again">Play Again</button>
+                </div>
+                <div class="house-div">
+                    <h1>HOUSE PICKED</h1>
+                    <button class="house img ">
+                        <img class="house-Img" src="" alt="">
+                    </button>
+                </div>
+              
+            </div>
+        
+        
+
+        </div>
+
+    </div>
+    <div class="rules">
+        <button class="rules-btn">Rules</button> 
+     </div>
+     
+    <script src="/script.js"></script>
+</body>
+</html>
